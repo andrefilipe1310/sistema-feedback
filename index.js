@@ -12,11 +12,11 @@ app.use(bodyParser.json());
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
-  host: "roundhouse.proxy.rlwy.net",
+  host: "monorail.proxy.rlwy.net",
   user: "root",
-  password: "HDeA6-G1CBga6fafFf11F66GC-hcCaG-",
-  database: "feedbacks",
-  port: 39800, // Ajustar conforme necessário
+  password: "d3hEG-63Faa-B2eH4h1BeH65fcB6d34c",
+  database: "railway",
+  port: 23812, // Ajustar conforme necessário
 });
 
 // Conecta ao banco de dados MySQL
