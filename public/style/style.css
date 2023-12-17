@@ -1,0 +1,311 @@
+/* Barra de navegação */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#04a8a8;
+}
+
+#navbar {
+  background-color: #ffffff;
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-link{
+  background-color: #f8f8f8 !important;
+}
+
+#items-menu{
+  margin-left: 0px !important;
+}
+.nav-item {
+  background-color: #f8f8f8 !important;
+  padding: 0px !important;
+} 
+.dropdown-item{
+font-size: 11.52px;
+font-family: 'Lato', sans-serif;
+}
+.icones-redes a i:hover {
+  transform: scale(1.5);
+}
+#img-logo{
+  width: 130px;
+}
+#redes{
+  background-color: #f8f8f8
+}
+.icone-nav{
+  background-color: #f8f8f8; 
+  color: #04a8a8; 
+  font-size: 1.8em;
+}
+/* Barra de navegação */
+
+/* Formulário */
+.formulario-grid {
+  background-color: #04a8a8;
+}
+
+#line {
+  height: 1px;
+  background-color: black;
+}
+
+#categoria {
+  background-color: #f4d27b;
+  font-weight: bold;
+}
+
+#categoria:hover {
+  color: #003333;
+}
+
+.texto-foto1 {
+  font-family: 'Roboto';
+  position: relative;
+  top: 27rem;
+  font-size: 40px;
+  font-weight: 600;
+  z-index: 1;
+  color: #f8f8f8;
+}
+
+.titulo-black{
+  font-family: 'Roboto';
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+}
+
+.texto-foto2 {
+  position: relative;
+  top: 26rem;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 1;
+  color: #f8f8f8;
+}
+
+#img-homemSorrindo {
+  position: absolute;
+  width: 84rem;
+  padding-left: 0px;
+}
+
+#img-homemSorrindo2 {
+  display: none;
+}
+
+.formulario-caixa {
+  border-radius: 15px;
+  margin-top: 10px;
+  z-index: 1; 
+ 
+}
+
+#input-nome {
+  margin: -15px;
+  margin-left: -15%;
+}
+
+#input-email {
+  margin: -15px;
+  margin-left: -24%;
+}
+
+#input-descricao {
+  margin: -15px;
+  margin-left: -2%;
+}
+
+#descricao,
+#sugestao {
+  resize: none;
+}
+
+.adicionar {
+  border-radius: 5px;
+  background-color: #f4d27b;
+  padding: 2%;
+  cursor: pointer;
+  font-weight: bold;
+}
+.anexo{
+  width: 25%;
+}
+
+.elemento-anexo{
+  border-radius: 5px;
+  background-color: #f4d27b;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#enviar {
+  font-weight: bold;
+  width: 50%;
+  background-color: #04a8a8;
+  color: #ffff;
+}
+
+#enviar:hover {
+  color: black;
+}
+
+.formulario-container {
+  width: 100%;
+}
+/* Formulário */
+
+/*botão de anexo*/
+.icone-anexo {
+  margin-right: 0.3rem;
+  margin-left: 0.3rem;
+}
+/*botão de anexo*/
+
+/* barra de pesquisa feed*/
+#divPesquisa {
+  position: relative;
+  width: 94%;
+}
+
+#barraPesquisa,
+#btnBarra {
+  border-color: #04a8a8;
+}
+
+
+#icone-pesquisar {
+  color: #04a8a8;
+}
+/* barra de pesquisa feed*/
+
+/* Filtro */
+#filtro {
+  cursor: pointer;
+  background-color: #04a8a8;
+  height: 10vh;
+}
+/* Filtro */
+
+/* Lista feed */
+#lista {
+  margin-top: 10px;
+}
+#icone {
+  color: #04a8a8;
+}
+
+#novo-feed {
+  font-weight: bold;
+}
+/* Lista feed */
+
+/* Footer */
+.bg-sand {
+  background-color: #f4d27b;
+}
+.bg-green {
+  background-color: #04a8a8;
+}
+.icones-redes {
+  margin-left: 15px;
+  transition: transform 0.3;
+}
+.justify-redes {
+  display: flex;
+  margin: 1em;
+  flex-direction: row;
+  text-align: right;
+}
+
+@media (max-width: 550px) {
+  #img-homemSorrindo {
+    display: none;
+  }
+  #img-homemSorrindo2 {
+    display: inline;
+    position: absolute;
+    padding: 0px;
+  }
+
+  .ajust-mt {
+    padding-top: 500px !important;
+  }
+  .ajust-col {
+    width: 90% !important;
+  }
+  .texto-foto1 {
+    top: 17rem;
+  }
+  .texto-foto2 {
+    top: 17.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  body {
+    background-color: #f4d27b;
+  }
+
+  .navbar-brand img {
+    width: 100%; /* Garante que a imagem da logo seja responsiva */
+  }
+
+  #img-homemSorrindo {
+    width: 100%; /* Torna a imagem do homem sorrindo responsiva */
+    margin-left: 0; /* Alinha a imagem à esquerda */
+  }
+
+  .texto-foto1,
+  .texto-foto2 {
+    /* Ajusta o tamanho do texto */
+    /* Posiciona o texto corretamente */
+  }
+
+  .formulario-caixa {
+    /* Remove a borda arredondada do formulário */
+    margin-top: 0; /* Ajusta a margem do formulário */
+  }
+
+  #input-nome,
+  #input-email,
+  #input-descricao {
+    margin-left: 0; /* Ajusta a margem esquerda dos inputs */
+  }
+
+  #enviar {
+    width: 100%; /* Faz o botão de enviar ocupar 100% da largura */
+  }
+
+  #search_div {
+    width: 100%; /* Faz a barra de pesquisa ocupar 100% da largura */
+  }
+}
+
+@media (min-width: 1000px) {
+  .formulario-grid {
+    padding-right: 15px;
+  }
+}
+
+/* Comandos a mais */
+.pb-n5 {
+  padding-bottom: -5rem !important;
+}
+.alerta {
+  color: red;
+}

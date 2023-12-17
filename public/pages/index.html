@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="icon" href="../img/favicon.ico" type="image/png">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/script-feed.js" defer></script>
+    <script src="../scripts/script-search.js" defer></script>
+    <script src="../scripts/script-file.js" defer> </script>
+    <title>Home</title>
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+      
+    />
+  </head>
+
+  <body>
+<!-- Navbar -->
+
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg bg-light">
+      <div class="container bg-light">
+        <a class="navbar-brand" href="#">
+          <img id="img-logo" src="..\images\acqio-logo.png" alt="">
+        </a>
+    
+        <!-- Botão de Toggler -->
+        <button class="navbar-toggler  custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#items-menu, #redes" aria-controls="items-menu, redes" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <!-- Itens do Menu -->
+        <div class="collapse navbar-collapse justify-content-start" id="items-menu"> 
+          <div class="navbar-nav">
+            <div>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> SOBRE A ACQIO</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://acqio.com.br/historico/">SOBRE A EMPRESA</a>
+                  <a class="dropdown-item" href="https://acqio.com.br/privacidade/">PRIVACIDADE</a>
+                  
+                </div>
+              </li>
+            </div>
+            <div><a href="https://acqio.com.br/acqio-online/" class="nav-link">ACQIO ONLINE</a></div>
+            <div><a href="https://acqio.com.br/franquias/" class="nav-link">FRANQUIAS</a></div>
+            <div><a href="https://acqio.com.br/blog/" class="nav-link">BLOG</a></div>
+          </div>
+        </div>
+      </div>
+  
+     <!-- Icons Social Media --> 
+      <div class="collapse navbar-collapse justify-content-end align" id="redes">
+        <div class="justify-redes"  >
+            <div class="icones-redes">
+                <a class="nav-link" href="https://www.facebook.com/Acqio/" target="_blank"><i class="fab fa-facebook icone-nav" ></i></a>
+            </div>
+            <div class="icones-redes">
+                <a class="nav-link" href="https://br.linkedin.com/company/acqio" target="_blank"><i class="fab fa-linkedin icone-nav"></i></a>
+            </div >
+            <div class="icones-redes">
+              <a class="nav-link" href="https://www.instagram.com/acqio/" target="_blank" ><i class="fab fa-instagram icone-nav"></i></a>
+            </div>
+            <div class="icones-redes">
+              <a class="nav-link" href="https://www.youtube.com/@Acqio/featured" target="_blank"><i class="fab fa-youtube icone-nav"></i></a>
+            </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!--formulário-->
+  
+    <div class="container-fluid text-center" >
+      <div class="row formulario-grid">   
+        <div class="col-7 row justify-content-start text-start">
+          <!-- Div para texto sobre a imagem -->
+          <div class="position-absolute col-4 ajust-col"> 
+            <p class="texto-foto1">Seu feedback é muito importante para nós!</p>
+            <p class="texto-foto2">Deixe sua opinião!</p>
+          </div>
+    
+          <!-- Imagem -->
+          <img id="img-homemSorrindo" class=" img-fluid w-100" src="../images/img_pc.png" alt="">
+          <img id="img-homemSorrindo2" src="../images/img_cell.png" alt=""> 
+        </div>
+    
+        <!-- Formulário -->
+        <div class="col row justify-content-center  mt-5 ajust-mt">
+          <div class="row col-9 bg-light mt-5 mb-4 formulario-caixa ">   
+            <div class="col mt-4">
+              <form id="formulario" class="container-fluid needs-validation" novalidate>
+                <!-- Título do Formulário -->
+                <div class="d-flex flex-row">
+                  <i id="icone" class="fas fa-2x fa-bullhorn"></i>
+                  <h2 id="novo-feed" class="mb-3 ms-3">Novo Feedback</h2>
+                </div>
+        
+                <!-- Linha de separação -->
+                <div class="w-5" id="line"></div>
+        
+                <!-- Dropdown de Categoria -->
+                <div class="d-flex justify-content-start mb-4 mt-3">
+                  <select
+                  class="form-select-md p-2 rounded"
+                  id="categoria"
+                  aria-label="Default select example"
+                >
+                
+                  <option selected>Categoria do Feedback</option>
+                  <option class="opcao" value="SmartPOS">SmartPOS</option>
+                  <option class="opcao" value="Acqio+">Acqio+</option>
+                  <option class="opcao" value="POS">POS</option>
+                  <option class="opcao" value="Acqio Online">Acqio Online</option>
+                  <option class="opcao" value="Acqio Link">Acqio Link</option>
+                  <option class="opcao" value="Taxa Zero">Taxa Zero</option>
+                  <option class="opcao" value="Multi-Lojista">Multi-Lojista</option>
+                  <option class="opcao" value="PIX">Pix</option>
+                </select>
+                </div>
+    
+                <!-- Nome -->
+                <div class="mb-4">
+                  <div class="form-outline">
+                    <input type="text" class="form-control" id="nome" required autocomplete="off"/>
+                    <label for="nome" class="form-label">Digite seu nome</label>
+                    <div id="input-nome" class="invalid-feedback">Por favor, digite um nome de usuário válido</div>
+                  </div>
+                </div>
+    
+                <!-- Email -->
+                <div class="mb-4">
+                  <div class="form-outline">
+                    <input type="email" class="form-control" id="email" required autocomplete="off"/>
+                    <label for="email" class="form-label">Digite seu email</label>
+                    <div id="input-email" class="invalid-feedback">Por favor, digite um email válido</div>
+                  </div>
+                </div>
+    
+                <!-- Descrição -->
+                <div class="mb-5">
+                  <div class="form-outline">
+                    <textarea name="descricao" id="descricao" cols="30" rows="3" class="form-control" required></textarea>
+                    <label for="descricao" class="form-label">Digite seu feedback</label>
+                    <div id="input-descricao" class="invalid-feedback">Deixe aqui seu feedback para realizar o envio do formulário</div>
+                  </div>
+                </div>
+    
+                <!-- Sugestão -->
+                <div class="mb-5">
+                  <div class="form-outline">
+                    <textarea name="sugestao" id="sugestao" class="form-control" cols="30" rows="3"></textarea>
+                    <label for="sugestao" class="form-label">Deixe a sua sugestão para a sua ideia</label>
+                  </div>
+                </div>
+                 <!-- Botão de Anexo -->
+                <div class="justify-content-start d-flex anexos">
+                  <div class="anexo">
+                    <label for="adicionar-input" class="mb-4 adicionar "  style="margin-right: 0.5rem;">
+                      <i  class="icone-anexo fas fa-paperclip mr-1" ></i>Anexo
+                    </label>
+                    <input type="file" onchange="lerArquivo()" id="adicionar-input" multiple accept=".pdf">
+                  </div>
+                  <!-- <label class="mb-5 elemento-anexo " style="margin-right: 0.5rem">teste.txt<span class="icone-anexo"><i class="fechar-icone fas fa-times mr-1" aria-hidden="true"></i></span></label> -->
+                 
+                </div>
+                
+                <!-- Botão de Enviar -->
+                <div class="d-flex mb-4 justify-content-center">
+                  <button class="btn" onclick="validacao();" id="enviar">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mt-2 mb-2 d-flex justify-content-center">
+      <p class="titulo-black text-dark tilulo2 d-none"> Alguns Feedbacks</p>
+    </div>
+  
+    <!--<feed>-->
+
+      
+      
+      <div id="feed" class=" container d-none mt-4 p-4 mb-2">
+       
+        <div class="row mb-3">
+        <!--Barra de pesquisa (Bruno K.)-->
+      <div id="divPesquisa" class="container-fluid mt-4 mb-4 justify-content-center">
+        <form class="d-flex" role="search" >
+        <input id="barraPesquisa" class="form-control me-2" type="search" placeholder="Buscar feedback" aria-label="Search" >
+        <a href="#feed"><button id="btnBarra" class="btn" type="submit"><i id="icone-pesquisar" class="fa-solid fa-magnifying-glass" style="color: white;"></i></button></a>
+        </form>
+      </div> 
+      <div id="filtro" class="container p-4">
+
+      <select class="form-select  " aria-label="Default select example">
+        <option selected><strong> Filtrar feedback</strong></option>
+        <option value="1">Feedbacks</option>
+        <option value="2">Nomes</option>
+        
+      </select>
+    </div>
+    </div>
+
+      <div id="cards" class="row linha-principal">
+        <div class="col-md-6 esquerda"></div>
+        <div class="col-md-6 direita"></div>
+      </div>
+    <!--</feed>-->
+      </div>
+    <!-- <Footer>-->
+    <footer class="bg-green text-center text-lg-start bottom-0 w-100">
+      <div>
+        <div class="text-center p-3">
+          <img
+            src="https://acqio.com.br/wp-content/themes/acqio_theme/imgs/acqio-white.svg"
+            alt="Acqio"
+            width="106"
+          />
+          <p class="text-center text-white">
+            Quem faz, conta com a gente.
+            <br />
+            Acqio 2014 - 2021. Todos os direitos reservados
+            <br />
+            CNPJ: 18.577.728/0001-46
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- </footer>-->
+
+    <script
+      src="https://kit.fontawesome.com/e478d725a2.js"
+      crossorigin="anonymous"
+    >
+  </script>
+
+<script>
+$(document).ready(function() {
+  // Ativar o submenu ao passar o mouse sobre o item do menu "Produtos"
+  $('.nav-item.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(150);
+  }, function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(100);
+  });
+});
+</script>
+
+<script>
+
+  // validação do formulario
+  const validacao = (() => {
+    'use strict';
+  
+    const forms = document.querySelectorAll('.needs-validation');
+    const email = document.querySelector("#email").value
+    Array.prototype.slice.call(forms).forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+          form.classList.add('was-validated');
+        } else{
+        
+        }
+      }, false);
+    });
+  })
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+<!--bootstrap tradicional-->
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"
+  ></script>
+  <!-- MDB -->
+  <script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+  ></script>
+  </body>
+</html>
