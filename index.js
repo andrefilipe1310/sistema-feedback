@@ -14,9 +14,9 @@ app.use(bodyParser.json());
 const db = mysql.createConnection({
   host: "roundhouse.proxy.rlwy.net",
   user: "root",
-  password: "6BCfBD4bCGe4BHf4GdDb-b2de33Fheb3",
-  database: "railway",
-  port: 57405, // Ajustar conforme necessário
+  password: "HDeA6-G1CBga6fafFf11F66GC-hcCaG-",
+  database: "feedbacks",
+  port: 39800, // Ajustar conforme necessário
 });
 
 // Conecta ao banco de dados MySQL
