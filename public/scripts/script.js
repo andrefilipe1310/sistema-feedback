@@ -2,28 +2,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function atualizarCurtidas(feedbackId) {
     try {
-        const response = await fetch(`/update-curtidas/${feedbackId}`, {
-            method: "PUT",
-        });
+      const response = await fetch(`/update-curtidas/${feedbackId}`, {
+        method: "PUT",
+      });
 
-        if (!response.ok) {
-            console.error("Erro ao atualizar curtidas.");
-        }
+      if (!response.ok) {
+        console.error("Erro ao atualizar curtidas.");
+      }
     } catch (error) {
-        console.error("Erro ao processar requisição:", error);
+      console.error("Erro ao processar requisição:", error);
     }
-}
+  }
 
-function validarEmail(email) {
+  function validarEmail(email) {
     // Expressão regular para validar o formato do e-mail
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    
+
     // Testar o e-mail com a expressão regular
     return regexEmail.test(email);
-}
+  }
 
-function atualizariconIndividual(item){
-    item.addEventListener("click",()=>{
+  function atualizariconIndividual(item) {
+    item.addEventListener("click", () => {
       const espacoCurtidas = item.parentNode;
       const curtida = espacoCurtidas.querySelector("p.curtida");
       const icone = item.querySelector("i");
@@ -36,38 +36,74 @@ function atualizariconIndividual(item){
         curtida.innerHTML = `${Number(curtida.innerHTML) - 1}`;
       }
     })
-}
-   
-let controlador = 0
-  async function loadFeedbacks() {
-    
+  }
+
+  let controlador = 0
+  let cards = []
+  async function updade() {
     const response = await fetch("/feedbacks");
     const feedbacks = await response.json();
-  
-    
+
+
+    for (let index = 0; index < feedbacks.length; index++) {
+      let element = feedbacks[index];
+
+      const card = FeedbackCard(element, controlador);
+
+      if (controlador % 2 == 0) {
+
+        const esquerda = document.querySelector(".esquerda");
+
+        esquerda.appendChild(card);
+      }
+      else {
+        const direita = document.querySelector(".direita");
+        direita.appendChild(card);
+      }
+
+      controlador++
+      const selecao = card.querySelector(".row .espaco-curtidas .caixa")
+
+      atualizariconIndividual(selecao)
+
+    }
+
+
+
+  }
+
+  async function loadFeedbacks() {
+
+    const response = await fetch("/feedbacks");
+    const feedbacks = await response.json();
+
     const feedContainer = document.getElementById("feed");
-    
-    
+
+
     const esquerda = document.querySelector(".esquerda");
     const direita = document.querySelector(".direita");
-    
-    if(feedbacks.length > 0){
+
+    if (feedbacks.length > 0) {
       const titulo2 = document.querySelector(".tilulo2")
       titulo2.classList.remove("d-none");
       feedContainer.setAttribute("class", "container bg-green p-4 mb-2");
-      const card = FeedbackCard(feedbacks[feedbacks.length-1], controlador);
-      if(controlador % 2 == 0){
+      const card = FeedbackCard(feedbacks[feedbacks.length - 1], controlador);
+
+
+
+      if (controlador % 2 == 0) {
         esquerda.appendChild(card);
       }
-      else{
+      else {
         direita.appendChild(card);
       }
       controlador++
       const selecao = card.querySelector(".row .espaco-curtidas .caixa")
-       
+
       atualizariconIndividual(selecao)
     }
   }
+
 
   function FeedbackCard(feedback, indice) {
     const card = document.createElement("div");
@@ -92,7 +128,7 @@ let controlador = 0
     span.setAttribute("class", "caixa bg-green p-3");
     span.setAttribute("style", "ax-width: 5rem; border-radius: 20px; cursor:pointer;");
     span.setAttribute("id", `caixa${indice}`);
-    
+
 
     const icon = document.createElement("i");
     icon.setAttribute("class", "fa-2x fa-regular fa-thumbs-up");
@@ -147,10 +183,10 @@ let controlador = 0
       numCurtidas: 0,
     };
 
-if((novoFeedback.nomePessoa == "" || novoFeedback.email == "" || novoFeedback.feedback == "") || !validarEmail(novoFeedback.email)){
+    if ((novoFeedback.nomePessoa == "" || novoFeedback.email == "" || novoFeedback.feedback == "") || !validarEmail(novoFeedback.email)) {
 
-return -1
-}
+      return -1
+    }
 
     const response = await fetch("/add-feedback", {
       method: "POST",
@@ -163,11 +199,12 @@ return -1
     if (response.ok) {
       loadFeedbacks();
       feedbackForm.reset();
-      
-      
+
+
     } else {
       console.error("Erro ao adicionar feedback.");
     }
   });
-  loadFeedbacks();
+
+  updade();
 });
